@@ -1,0 +1,321 @@
+#Which menu should /punish <player> open?
+Command: "{openmenu:main-menu}"
+#Should the console run the punishment command?
+ConsoleRunsCommands: false
+#Toggle update checks
+CheckForUpdates: true
+#Menus
+menus:
+  #main-menu is the default menu, to create more just copy and paste the same format.
+  main-menu:
+    #You're using this name to access to this menu from anywhere in the configuration where you have action option
+    #Just use for action {openmenu:menu-name}
+    name: "main-menu"
+    menu-title: "&c&lJucBox"
+    menu-size: 54
+    fill-menu:
+      enabled: true
+      fill-data: 15
+      material: "STAINED_GLASS_PANE"
+    items:
+      ClientModOffensesItem:
+        name: "&a&lHack/Client Mod"
+        material: "IRON_SWORD"
+        durability: 0
+        slot: 14
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: false
+          #Put command without /
+          execute: ""
+        action: ""
+        lore:
+          - ""
+          - '&7X-Ray, Forcefield, Speed, Fly, Hacks, etc'
+          - ""
+      GeneralOffensesItem:
+        name: "&a&lAbuso de bugs"
+        material: "HOPPER"
+        durability: 0
+        slot: 12
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: false
+          #Put command without /
+          execute: ""
+        action: ""
+        lore:
+          - ""
+          - '&7Abuso de comandos, mapas, bugs, etc'
+          - ""
+      ChatOffensesItem:
+        name: "&a&Punições referente ao chat"
+        material: "BOOK_AND_QUILL"
+        durability: 0
+        slot: 10
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: false
+          #Put command without /
+          execute: ""
+        action: ""
+        lore:
+          - ""
+          - '&7Abuso verbal, spam, chat fake, etc'
+          - ""
+      WarningItem:
+        name: "&a&lAviso"
+        material: "ANVIL"
+        durability: 0
+        slot: 43
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "warn {target} Spam/Chat Fake/Trolling -s"
+        action: ""
+        lore:
+          - ' '
+          - '&7Example Warning Input:'
+          - '&fSpam - Escrever várias palavras repetidamente'
+          - '&fChat Fake - Quem me der um diamante ganha /fly'
+          - '&fTroll - Estressando ou importunando algum player'
+          - ' '
+      PermanentMuteItem:
+        name: "&a&lMute permantente"
+        material: "PAPER"
+        durability: 0
+        slot: 25
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "mute {target} Aviso severo/Abusos no chat -s"
+        action: ""
+        lore:
+          - '&fDuração: &ePermanente'
+          - ' '
+          - '&7Aviso severo (divulgação):'
+          - '&fEste server é ruim, entre no Hypixel que é melhor'
+          - ' '
+      Tipo1MuteItem:
+        name: "&a&lTipo 1"
+        material: "INK_SACK"
+        durability: 0
+        slot: 19
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "mute {target} 1h Spam leve/Acusações leve -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 Hora'
+          - ' '
+          - '&7Spam leve'
+          - '&fRepetiu a mesma mensagem 2~5 vezes'
+          - ' '
+          - '&7Acusação leve'
+          - '&fvocê é um hacker lixo!'
+          - ' '
+      Tipo2MuteItem:
+        name: "&a&lTipo 2"
+        material: "INK_SACK"
+        durability: 0
+        slot: 28
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "mute {target} 1w Spam médio/Abuso verbal"
+        action: ""
+        lore:
+          - '&fDuração: &e1 Semana'
+          - ' '
+          - '&7Spam'
+          - '&fRepetiu a mesma mensagem 6~20 vezes'
+          - ' '
+          - '&7Abuso verbal
+          - '&fofensas/palavrões em geral'
+          - ' '
+      Tipo3MuteItem:
+        name: "&a&lTipo 3"
+        material: "INK_SACK"
+        durability: 0
+        slot: 37
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "mute {target} 1m Tipo 3 -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 Mês'
+          - ' '
+          - '&7Spam severo'
+          - '&fRepetiu a mesma mensagem 20+ vezes'
+          - '&fSpam Bot'
+          - ' '
+          - '&7Divulgação grave'
+          - '&fEntre no meu server: trashnet.net.com'
+          - ' '
+      PermanentBanItem:
+        name: "&a&lBan Permanente"
+        material: "REDSTONE_BLOCK"
+        durability: 0
+        slot: 34
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ban {target} Ban PERMANENTE -s"
+        action: ""
+        lore:
+          - '&fDuração: &ePra sempre'
+          - ' '
+          - '&7Infrações graves'
+          - ' '
+      Tipo1GeneralBanItem:
+        name: "&a&lTipo 1"
+        material: "INK_SACK"
+        durability: 0
+        slot: 21
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ban {target} 1h Team Killing/Trolling(Gameplay)/Map-Bug Exploiting -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 hora'
+          - ' '
+          - '&7Team Killing'
+          - '&fMatar amigos'
+          - ' '
+          - '&7Troll (Gameplay)'
+          - '&fTrap/Armadilhas para membros'
+          - ' '
+          - '&7Abuso de bugs'
+          - '&fAbuso de bugs para adquirir alguma vantagem'
+          - ' '
+      Tipo1ClientBanItem:
+        name: "&a&lTipo 1"
+        material: "INK_SACK"
+        durability: 0
+        slot: 23
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ban {target} 1d Damage Indicators/Player Radar -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 Day'
+          - ' '
+          - '&7Exemplos'
+          - '&fDamage Indicators (mods)'
+          - '&fPlayer Radar (mods)'
+          - ' '
+      Tipo2ClientBanItem:
+        name: "&a&lTipo 2"
+        material: "INK_SACK"
+        durability: 0
+        slot: 32
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ban {target} 1w Forcefield/Speed Hack/Reach Hack/Other Hack (First Offense) -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 Semana'
+          - ' '
+          - '&7Exemplos'
+          - '&fForcefield'
+          - '&fSpeed Hack'
+          - '&fReach Hack'
+          - '&fOther Hack'
+          - ' '
+      Tipo3ClientBanItem:
+        name: "&a&lTipo 3"
+        material: "INK_SACK"
+        durability: 0
+        slot: 41
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ban {target} 1m Forcefield/Speed Hack/Reach Hack/Fly Hack/Other Hack (Second Offence) -s"
+        action: ""
+        lore:
+          - '&fDuração: &e1 mês'
+          - ' '
+          - '&7Examples'
+          - '&fForcefield'
+          - '&fSpeed Hack'
+          - '&fReach Hack'
+          - '&fFly Hack'
+          - '&fOther Hack'
+          - ' '
+      IPMuteItem:
+        name: "&a&lIP Mute"
+        material: "TNT"
+        durability: 0
+        slot: 7
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ipmute {target} IPMUTE -s"
+        action: ""
+        lore:
+          - ' '
+          - '&fDuração: &ePra sempre'
+          - '&cIP MUTE'
+          - ' '
+      IPBanItem:
+        name: "&a&lIP BAN"
+        material: "TNT"
+        durability: 0
+        slot: 7
+        message:
+          enabled: false
+          text: "&eOlá &b<player>!"
+        command:
+          enabled: true
+          #Put command without /
+          execute: "ipban {target} IPBAN -s"
+        action: ""
+        lore:
+          - ' '
+          - '&fDuração: &ePra sempre'
+          - '&cIP BAN'
+          - ' '

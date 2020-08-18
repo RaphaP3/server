@@ -1,0 +1,3 @@
+PUNISH:
+  USAGE: '&cUse: /punish <user>'
+  NAME-ERROR: '&cUsuário inválido!'
